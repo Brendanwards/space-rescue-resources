@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+    #!/usr/bin/python3
 
 import sys
 import pygame
@@ -9,7 +9,6 @@ pygame.mixer.init()
 pygame.init()
 pygame.font.init()
 pygame.joystick.init()
-
 joysticks = [pygame.joystick.Joystick(x) for x in range(pygame.joystick.get_count())]
 for joystick in joysticks:
     joystick.init()
