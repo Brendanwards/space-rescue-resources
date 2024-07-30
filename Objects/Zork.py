@@ -1,5 +1,6 @@
 from GameFrame import RoomObject, Globals
 from Objects.Asteroid import Asteroid
+from Objects.Astronaut import Astronaut
 import random
 class Zork(RoomObject):
     """
