@@ -1,6 +1,7 @@
 from GameFrame import Level
 from Objects.Ship import Ship
 from Objects.Zork import Zork
+from Objects.Laser import Laser
 class GamePlay(Level):
     def __init__(self, screen, joysticks):
         Level.__init__(self, screen, joysticks)
