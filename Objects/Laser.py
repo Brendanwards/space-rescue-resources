@@ -22,7 +22,7 @@ class Laser(RoomObject):
 
         # handle events
         self.register_collision_object("Asteroid")
-        
+        self.register_collision_object("Astronaut")
     def step(self):
         """
         Determine what happens to the laser on each tick of the game clock
@@ -41,4 +41,6 @@ class Laser(RoomObject):
         Handles laser collisions with other registered objects
         """
         if other_type == "Asteroid":
+            self.room.delete_object(other)
+        elif other_type == "Astronaut":
             self.room.delete_object(other)
