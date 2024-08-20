@@ -1,7 +1,8 @@
 from GameFrame import RoomObject, Globals
 from Objects.Laser import Laser
+from Objects.Zork import Zork
 import pygame
-
+import random
 class Ship(RoomObject):
     """
     A class for the player's avitar (the Ship)
@@ -21,6 +22,11 @@ class Ship(RoomObject):
         self.handle_key_events = True
         
         self.can_shoot = True
+  
+        zork_spawn_time = random.randint(100, 400)
+        self.set_timer(zork_spawn_time, self.spawn_zork)
+
+
 
     def key_pressed(self, key):
         """
@@ -66,3 +72,10 @@ class Ship(RoomObject):
         Allows ship to shoot again
         """
         self.can_shoot = True
+    
+    def spawn_zork(self):
+        new_Zork = Zork(self.room, 1120, 50 + self.height/2)
+        self.room.add_room_object(new_Zork)
+
+        Zork_spawn_time = random.randint(100, 400)
+        self.set_timer(Zork_spawn_time, self.spawn_zork)

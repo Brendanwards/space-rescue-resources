@@ -49,3 +49,4 @@ class Lives(RoomObject):
         Updates the number of lives on the UI
         """
         self.set_image(self.lives_icon[Globals.LIVES], 125, 23)
+        

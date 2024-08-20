@@ -37,4 +37,4 @@ class Globals:
 # ############################################################# #
 
     total_count = 0
-    destroyed_count = 0
+    astronaut_helped_count = 40
